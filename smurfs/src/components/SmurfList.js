@@ -6,6 +6,7 @@ import SmurfCard from './SmurfCard';
 import { getSmurf } from '../store/actions'
 
 const SmurfList = props => {
+    console.log('jp: line9 smurflist.js', props)
     const { getSmurf, smurfs, isFetching } = props;
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const SmurfList = props => {
 }
 
 const mapStateToProps = state => {
-    console.log('jp: line 32 initial the inital', state)
+    console.log('jp: smurflist.js line 32 initial the inital', state)
     return {
         smurfs: state.smurfs,
         isFetching: state.isFetching,

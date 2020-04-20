@@ -13,7 +13,7 @@ export const getSmurf = () => dispatch => {
     axios
         .get('http://localhost:3333/smurfs')
         .then(res => {
-            console.log('jp: line 16 Get', res)
+            console.log('jp: line 16 Get action/index.js', res)
             dispatch( {type: FETCH_SMURF_SUCCESS, payload: res.data})
         })
         .catch(err => {
@@ -27,7 +27,7 @@ export const addSmurf = (smurf) => dispatch => {
     axios
         .post('http://localhost:3333/smurfs', smurf)
         .then(res => {
-            console.log('jp: line 30 add', res)
+            console.log('jp: line 30 add action/index.js', res)
             dispatch({ type: POST_SMURF_SUCCESS, payload: res.data})
         })
         .catch(err => {
